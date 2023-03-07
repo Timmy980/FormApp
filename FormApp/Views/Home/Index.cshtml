@@ -1,0 +1,33 @@
+﻿@model FormApp.Models.Person
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <section class="form w-100 m-auto">
+                <form id="details" asp-controller="person" asp-action="Submit" method="get">
+                    <hr />
+                    <div class="form-floating mb-3">
+                        <input asp-for="Name" class="form-control" aria-required="true" />
+                        <label asp-for="Name" class="form-label">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Address" class="form-control" aria-required="true" />
+                        <label asp-for="Address" class="form-label">Address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Email" class="form-control" aria-required="true"  />
+                        <label asp-for="Email" class="form-label">Email</label>
+                    </div>
+                    <div>
+                        <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Show</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+</div>
